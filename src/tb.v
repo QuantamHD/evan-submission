@@ -10,6 +10,7 @@ module tb (
     // testbench is controlled by test.py
     input clk,
     input rst,
+    input [5:0] seed,
     output [6:0] segments
    );
 
@@ -21,7 +22,7 @@ module tb (
     end
 
     // wire up the inputs and outputs
-    wire [7:0] inputs = {6'b0, rst, clk};
+    wire [7:0] inputs = {seed, rst, clk};
     wire [7:0] outputs;
     assign segments = outputs[6:0];
 
