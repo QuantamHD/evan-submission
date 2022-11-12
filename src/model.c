@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdint.h>
 
-void xorshift32(uint32_t *state)
+struct xorshift32_state {
+    unsigned int a : 20;
+};
+
+void xorshift32(struct xorshift32_state *state)
 {
 	/* Algorithm "xor" from p. 4 of Marsaglia, "Xorshift RNGs" */
-	uint32_t x = *state;
+	uint32_t x = state->a;
 	x ^= x << 13;
 	x ^= x >> 17;
 	x ^= x << 5;
