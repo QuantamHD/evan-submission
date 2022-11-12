@@ -2,3 +2,7 @@
 .idea
 .vscode
 *.vcd
+*.pyc
+**/a.out
+**/cmds.f
+**/sim.vvp
