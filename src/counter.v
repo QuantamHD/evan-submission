@@ -33,7 +33,7 @@ module seven_segment_seconds #( parameter MAX_COUNT = 1000 ) (
                 inital_state = inital_state ^ (inital_state << 5);
 
                 // increment digit
-                digit <= inital_state[3:0] % 10;
+                digit <= {1'b0, inital_state[2:0]};
             end else 
                 // increment counter
                 second_counter <= second_counter + 1'b1;

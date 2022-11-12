@@ -16,7 +16,8 @@ seg_map = {
     9: 103
 }
 
-segments = [seg_map[0], seg_map[9], seg_map[9],  seg_map[1], seg_map[5], seg_map[3], seg_map[4], seg_map[2], seg_map[0]]
+# First value is always 0
+segments = [seg_map[0], seg_map[1], seg_map[1],  seg_map[5], seg_map[7], seg_map[1], seg_map[0], seg_map[2], seg_map[2]]
 
 @cocotb.test()
 async def test_7seg(dut):

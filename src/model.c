@@ -1,14 +1,10 @@
 #include <stdio.h>
 #include <stdint.h>
 
-struct xorshift32_state {
-    unsigned int a : 20;
-};
-
-void xorshift32(struct xorshift32_state *state)
+void xorshift32(uint32_t *state)
 {
 	/* Algorithm "xor" from p. 4 of Marsaglia, "Xorshift RNGs" */
-	uint32_t x = state->a;
+	uint32_t x = *state;
 	x ^= x << 13;
 	x ^= x >> 17;
 	x ^= x << 5;
@@ -19,7 +15,7 @@ int main() {
     uint32_t seed = 1;
     for (int i = 0; i < 9; i++) {
         xorshift32(&seed);
-        printf("state: %u, digit: %u\n", seed, seed % 10);
+        printf("state: %u, digit: %u\n", seed, (seed & 7));
     }
     return 0;
 }
