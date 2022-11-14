@@ -20,7 +20,7 @@ seg_map = {
 segments = [seg_map[0], seg_map[1], seg_map[1],  seg_map[5], seg_map[7], seg_map[1], seg_map[0], seg_map[2], seg_map[2]]
 
 @cocotb.test()
-async def test_7seg(dut):
+async def test_xorshift32(dut):
     dut._log.info("start")
     clock = Clock(dut.clk, 10, units="us")
     cocotb.fork(clock.start())

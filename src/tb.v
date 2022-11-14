@@ -27,7 +27,7 @@ module tb (
     assign segments = outputs[6:0];
 
     // instantiate the DUT
-    seven_segment_seconds #(.MAX_COUNT(100)) seven_segment_seconds(
+    xor_shift32_quantamhd #(.MAX_COUNT(100)) xor_shift32_quantamhd(
         .io_in  (inputs),
         .io_out (outputs)
         );
