@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1668384907" />
-    <testcase name="test_xorshift32" classname="test" file="/usr/local/google/home/ethanmoon/ethan-evan-random-numbers/src/test.py" lineno="22" time="0.0970613956451416" sim_time_ns="9090000.001" ratio_time="93652063.63025339" />
+    <property name="random_seed" value="1668409773" />
+    <testcase name="test_xorshift32" classname="test" file="/usr/local/google/home/ethanmoon/ethan-evan-random-numbers/src/test.py" lineno="22" time="0.09537601470947266" sim_time_ns="9090000.001" ratio_time="95306980.78221536" />
   </testsuite>
 </testsuites>
