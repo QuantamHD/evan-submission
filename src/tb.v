@@ -27,7 +27,7 @@ module tb (
     assign segments = outputs[6:0];
 
     // instantiate the DUT
-    xor_shift32_quantamhd #(.MAX_COUNT(100)) xor_shift32_quantamhd(
+    xor_shift32_evango #(.MAX_COUNT(100)) xor_shift32_evango(
         .io_in  (inputs),
         .io_out (outputs)
         );
