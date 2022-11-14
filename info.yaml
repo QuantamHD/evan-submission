@@ -14,12 +14,12 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       "Matt Venn"      # Your name
-  discord:      "mattvenn"      # Your discord handle
-  title:        "7 segment seconds"      # Project title
-  description:  "count up to 10, one second at a time"      # Short description of what your project does
-  how_it_works: "uses a register and some combinational logic"      # Longer description of how the project works
-  how_to_test:  "after reset, the counter should increase by one every second"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  author:       "Ethan Mahintorabi"      # Your name
+  discord:      "ethanmoon"      # Your discord handle
+  title:        "XorShift32"      # Project title
+  description:  "XorShift32 random number generator"      # Short description of what your project does
+  how_it_works: "Uses the Xorshift32 algorithm to generate a random 32 bit number. Number is truncated to 3 bits and displayed"      # Longer description of how the project works
+  how_to_test:  "While reset is set, hardware reads in seed value from input bits 2:7 and sets the inital seed as that binary number. After reset is deasserted, the hardware will generate a new number every 1000 clock cycles."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  ""      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
@@ -28,12 +28,12 @@ documentation:
   inputs:               # a description of what the inputs do
     - clock
     - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - seed_bit0
+    - seed_bit1
+    - seed_bit2
+    - seed_bit3
+    - seed_bit4
+    - seed_bit5
   outputs:
     - segment a         # a description of what the outputs do
     - segment b
